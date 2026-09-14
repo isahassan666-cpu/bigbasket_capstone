@@ -14,6 +14,6 @@ This repository contains the complete end-to-end deliverables for the BigBasket 
 ## Project Deliverables
 
 - **Part 1: SQL & Database Analysis** — Completed and verified.
-- **Part 2: Spreadsheet Cross-Check** — In progress.
-- **Part 3: Tableau Public Dashboard** — *Link to be added upon completion.*
+- **Part 2: Spreadsheet Cross-Check** — Completed and verified. [Google Spreadsheet](https://docs.google.com/spreadsheets/d/13K8f0WUpBD6P7VRHM46mGiQW7LwvCANdZbm2wEpAGiY/edit?gid=2115019288#gid=2115019288)
+- **Part 3: Tableau Public Dashboard** — Completed. [Executive Performance Dashboard](https://public.tableau.com/app/profile/isa.sonday/viz/ExecutivePerformanceDashboard_17894214321570/ExecutivePerformanceDashboard)
 - **Part 4: Data Story & Insights** — *To be documented upon completion.*
