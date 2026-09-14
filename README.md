@@ -20,36 +20,15 @@ An end-to-end data analytics and business intelligence pipeline evaluating categ
 
 ```text
 bigbasket_capstone/
-├── data/
-│   ├── raw/
-
-# Raw exported CSV files
-│   └── processed/
-
-# Cleaned datasets
-├── notebooks/
-│   └── part4_analysis.ipynb
-
-# Python/Pandas data cleaning & analysis notebook
-├── sql/
-│   ├── schema.sql
-
-# Database schema setup
-│   ├── task1_queries.sql
-
-# Category revenue and performance queries
-│   └── task2_queries.sql
-
-# Order volume & customer KPI queries
-├── generate_data.py
-
-# Script to regenerate database and raw CSV exports
+├── 01_foundations.sql
+├── 02_aggregation_joins.sql
+├── 03_reporting.sql
+├── verify.sql
 ├── DATA_STORY.md
-
-# Task 7 executive narrative & strategic recommendations
+├── README.md
 ├── ai_log.md
-
-# Comprehensive log of AI assistance and prompts
-└── README.md
-
-# Project overview and reproduction guide
+├── generate_data.py
+├── bigbasket_capstone.db
+├── monthly_category_revenue.csv
+├── orders_raw.csv
+└── products.csv 
