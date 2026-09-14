@@ -7,7 +7,7 @@ An end-to-end data analytics and business intelligence pipeline evaluating categ
 
 ## Deliverables & Quick Links
 
-- **Part 1: SQL Analytics** — [SQL Scripts Directory](./sql/)
+- **Part 1: SQL Analytics** — [01 Foundations](./01_foundations.sql) | [02 Aggregation & Joins](./02_aggregation_joins.sql) | [03 Reporting](./03_reporting.sql)
 - **Part 2: Spreadsheet Cross-Check** — [Google Spreadsheet](https://docs.google.com/spreadsheets/d/13K8f0WUpBD6P7VRHM46mGiQW7LwvCANdZbm2wEpAGiY/edit?gid=2115019288#gid=2115019288)
 - **Part 3: Tableau Public Dashboard** — [Live Executive Performance Dashboard](https://public.tableau.com/app/profile/isa.sonday/viz/ExecutivePerformanceDashboard_17894214321570/ExecutivePerformanceDashboard)
 - **Executive Data Story (Task 7)** — [DATA_STORY.md](./DATA_STORY.md)
