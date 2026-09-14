@@ -1,19 +1,55 @@
+
 # BigBasket Analytics Capstone Project
 
-This repository contains the complete end-to-end deliverables for the BigBasket Data Analytics Capstone.
+An end-to-end data analytics and business intelligence pipeline evaluating category revenue performance, fulfillment trends, and margin benchmarks for BigBasket across H1 2026. This repository encompasses relational database modeling and SQL analysis, spreadsheet cross-validation and target tracking, an interactive executive Tableau dashboard, an automated Python/Pandas data pipeline, and strategic business reporting.
 
-## Repository Contents
+---
 
-- `bigbasket_capstone.db`: SQLite database containing seed data across products, customers, orders, and category targets.
-- `01_foundations.sql`: Foundational SQL queries covering filtering, sorting, and conditional operators.
-- `02_aggregation_joins.sql`: Grouping, aggregate metrics, and relational joins.
-- `03_reporting.sql`: Analytical reporting, CASE logic, and target variance analysis.
-- `monthly_category_revenue.csv`: Exported category revenue aggregation data.
-- [`ai_log.md`](ai_log.md): AI-assisted prompting log structured using the RCTCF framework with verification checks.
+## Deliverables & Quick Links
 
-## Project Deliverables
+- **Part 1: SQL Analytics** — [SQL Scripts Directory](./sql/)
+- **Part 2: Spreadsheet Cross-Check** — [Google Spreadsheet](https://docs.google.com/spreadsheets/d/13K8f0WUpBD6P7VRHM46mGiQW7LwvCANdZbm2wEpAGiY/edit?gid=2115019288#gid=2115019288)
+- **Part 3: Tableau Public Dashboard** — [Live Executive Performance Dashboard](https://public.tableau.com/app/profile/isa.sonday/viz/ExecutivePerformanceDashboard_17894214321570/ExecutivePerformanceDashboard)
+- **Executive Data Story (Task 7)** — [DATA_STORY.md](./DATA_STORY.md)
+- **Part 4: Python/Pandas Notebook** — [Part 4 Notebook](./notebooks/part4_analysis.ipynb) *(update path to match your notebook location)*
+- **AI Collaboration Log** — [ai_log.md](./ai_log.md)
 
-- **Part 1: SQL & Database Analysis** — Completed and verified.
-- **Part 2: Spreadsheet Cross-Check** — Completed and verified. [Google Spreadsheet](https://docs.google.com/spreadsheets/d/13K8f0WUpBD6P7VRHM46mGiQW7LwvCANdZbm2wEpAGiY/edit?gid=2115019288#gid=2115019288)
-- **Part 3: Tableau Public Dashboard** — Completed. [Executive Performance Dashboard](https://public.tableau.com/app/profile/isa.sonday/viz/ExecutivePerformanceDashboard_17894214321570/ExecutivePerformanceDashboard)
-- **Part 4: Data Story & Insights** — *To be documented upon completion.*
+---
+
+## Repository Structure
+
+```text
+bigbasket_capstone/
+├── data/
+│   ├── raw/
+
+# Raw exported CSV files
+│   └── processed/
+
+# Cleaned datasets
+├── notebooks/
+│   └── part4_analysis.ipynb
+
+# Python/Pandas data cleaning & analysis notebook
+├── sql/
+│   ├── schema.sql
+
+# Database schema setup
+│   ├── task1_queries.sql
+
+# Category revenue and performance queries
+│   └── task2_queries.sql
+
+# Order volume & customer KPI queries
+├── generate_data.py
+
+# Script to regenerate database and raw CSV exports
+├── DATA_STORY.md
+
+# Task 7 executive narrative & strategic recommendations
+├── ai_log.md
+
+# Comprehensive log of AI assistance and prompts
+└── README.md
+
+# Project overview and reproduction guide
