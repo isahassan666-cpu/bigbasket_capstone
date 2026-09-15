@@ -37,3 +37,33 @@ To make sure the generated query was accurate before exporting and committing th
    - For `Beverages` in `2024-07`, I ran:
      `SELECT COUNT(*), SUM(amount_inr) FROM orders o JOIN products p ON o.product_id = p.product_id WHERE p.category = 'Beverages' AND strftime('%Y-%m', o.order_date) = '2024-07' AND o.status = 'Delivered';`
    - The raw table values matched the exported CSV row for that category and month.
+  
+  
+## Prompt #2: Task 10 Data Cleaning - IQR Outlier Capping on Delivered Orders
+
+### RCTCF Framework Breakdown
+
+- **Role:** Senior Data Engineer and Pandas Specialist.
+- **Context:** Working on `orders_raw.csv` in Jupyter Notebook. The dataset has 500 cleaned records, but right-skewed extreme amounts on delivered orders distort summary statistics.
+- **Task:** Compute Q1, Q3, and the upper fence using the IQR method on non-null `Delivered` orders, then cap outlier values exceeding the upper fence using `.clip()` without dropping records.
+- **Constraints:**
+  - Restrict calculation strictly to `is_delivered == True` and non-null `amount_inr`.
+  - Cap values in place using `.clip(upper=upper_fence)`.
+  - Do not drop any rows; preserve the 500-record count intact.
+- **Format:** Executable Python code snippet with verification logic.
+
+### AI Code Applied
+
+```python
+
+# Filter delivered, non-null records
+delivered_mask = orders['is_delivered'] & orders['amount_inr'].notna()
+
+# Compute quartiles and IQR fence
+q1 = orders.loc[delivered_mask, 'amount_inr'].quantile(0.25)
+q3 = orders.loc[delivered_mask, 'amount_inr'].quantile(0.75)
+iqr = q3 - q1
+upper_fence = q3 + 1.5 * iqr
+
+# Cap values at upper fence
+orders.loc[delivered_mask, 'amount_inr'] = orders.loc[delivered_mask, 'amount_inr'].clip(upper=upper_fence)
