@@ -67,3 +67,7 @@ upper_fence = q3 + 1.5 * iqr
 
 # Cap values at upper fence
 orders.loc[delivered_mask, 'amount_inr'] = orders.loc[delivered_mask, 'amount_inr'].clip(upper=upper_fence)
+
+### Actually-Performed Verification Step
+- **Check:** Executed `orders.loc[delivered_mask, 'amount_inr'].max()` and inspected the top 3 outlier records.
+- **Result:** Confirmed the maximum delivered order amount is strictly capped at ₹800.00, and the overall dataset retained all 500 rows.
